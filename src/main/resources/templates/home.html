@@ -1,10 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title th:text="${name}"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p th:text="|Hello, ${name}!|"/>
+
+<h1 th:text="${name}"></h1>
+
+<p>In Spring’s approach to building web sites, HTTP requests are handled by a controller. You can easily identify the
+    controller by the @Controller annotation. In the following example, GreetingController handles GET requests for
+    /greeting by returning the name of a View (in this case, greeting). A View is responsible for rendering the HTML
+    content. The following listing (from src/main/java/com/example/servingwebcontent/GreetingController.java) shows the
+    controller:</p>
 </body>
 </html>
